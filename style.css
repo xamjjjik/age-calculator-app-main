@@ -88,6 +88,9 @@ container {
   margin-right: 40px;
   padding-left: 10%;
 }
+.error {
+  border: 1px solid red;
+}
 /* .birthday {
   display: block;
   border: 1px solid hsl(0, 0%, 86%);
