@@ -6,5 +6,5 @@ function getBirthday() {
   console.log(inputDay, inputMonth, inputYear);
 }
 
-const button = document.getElementsByClassName("button");
-button.addEventListener("click", getBirthday());
+const button = document.getElementById("button");
+button.onclick = getBirthday;

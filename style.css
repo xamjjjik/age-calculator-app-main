@@ -73,7 +73,7 @@ container {
   margin-left: 10%;
   margin-top: 0.5%;
 }
-input {
+.birthday {
   display: inline-block;
   border: 1px solid hsl(0, 0%, 86%);
   color: hsl(0, 1%, 44%);
@@ -125,6 +125,7 @@ button {
   height: 80px;
   width: 80px;
   margin-top: 2%;
+  cursor: pointer;
 }
 .result {
   display: grid;
