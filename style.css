@@ -63,24 +63,28 @@ container {
   padding-left: 2%;
 }
 
-.separator {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-
 .line {
-  /* padding-top: 3%;
-  margin-left: 10%; */
-  border-bottom: 10px solid #f00;
-  width: 700px; /* Параметры линии */
+  display: inline-block;
+  vertical-align: middle;
+
+  border-bottom: 2px solid hsl(0, 0%, 86%);
+  width: 700px;
+
+  height: 1px;
+
+  margin-top: 2%;
+  margin-left: 10px;
 }
 
-img {
+button {
+  display: inline-block;
+  vertical-align: middle;
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
-  /* height: 70px; */
+  border: 1px solid hsl(259, 100%, 65%);
+  height: 80px;
+  width: 80px;
+  margin-top: 2%;
 }
 .result {
   display: grid;
