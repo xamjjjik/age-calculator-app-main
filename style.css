@@ -132,8 +132,12 @@ button {
   margin-left: 10%;
   margin-top: 1.5%;
   font-family: "Poppins-ExtraBoldItalic";
-  font-size: 64px;
+  font-size: 4.5rem;
   font-weight: 900;
+  color: hsl(259, 100%, 65%);
+}
+.color-text {
+  color: black;
 }
 .attribution {
   font-size: 11px;
