@@ -6,16 +6,18 @@ function getBirthday() {
   let inputDay = document.getElementById("inputDay").value;
   let inputMonth = document.getElementById("inputMonth").value;
   let inputYear = document.getElementById("inputYear").value;
+  let toDays = 3600000 * 24 * 365;
   let yearsResult =
-    (today - calculateTime(inputDay, inputMonth, inputYear)) /
-    3600000 /
-    24 /
-    365;
-  let monthsResult = (yearsResult - Math.floor(yearsResult)) * 12;
-  let daysResult = monthsResult - Math.floor(monthsResult);
-  console.log(Math.floor(yearsResult), Math.floor(monthsResult), monthsResult);
-}
+    (today - calculateTime(inputDay, inputMonth, inputYear)) / toDays;
 
+  let monthsResult = (yearsResult - Math.floor(yearsResult)) * 12;
+  let daysResult = (monthsResult % 30) * 10;
+  let newDays = Math.floor(daysResult);
+  let newMonths = Math.floor(monthsResult);
+  let newYears = Math.floor(yearsResult);
+  setNewInterval(newYears, newMonths, newDays);
+}
+function setNewInterval(years, months, days) {}
 let yearsResult = document.getElementById("yearsResult").outerHTML;
 let monthsResult = document.getElementById("monthsResult").outerHTML;
 let daysResult = document.getElementById("daysResult").outerHTML;
