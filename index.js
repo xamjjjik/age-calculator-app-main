@@ -6,9 +6,14 @@ function getBirthday() {
   let inputDay = document.getElementById("inputDay").value;
   let inputMonth = document.getElementById("inputMonth").value;
   let inputYear = document.getElementById("inputYear").value;
-  console.log(
-    (today - calculateTime(inputDay, inputMonth, inputYear)) / 1000 / 3600 / 24
-  );
+  let yearsResult =
+    (today - calculateTime(inputDay, inputMonth, inputYear)) /
+    3600000 /
+    24 /
+    365;
+  let monthsResult = (yearsResult - Math.floor(yearsResult)) * 12;
+  let daysResult = monthsResult - Math.floor(monthsResult);
+  console.log(Math.floor(yearsResult), Math.floor(monthsResult), monthsResult);
 }
 
 let yearsResult = document.getElementById("yearsResult").outerHTML;
