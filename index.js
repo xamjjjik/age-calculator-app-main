@@ -7,9 +7,10 @@ function getBirthday() {
   let inputMonth = document.getElementById("inputMonth").value;
   let inputYear = document.getElementById("inputYear").value;
   let toDays = 3600000 * 24 * 365;
-  if (calculateTime(inputDay, inputMonth, inputYear) !== NaN) {
-    let yearsResult =
-      (today - calculateTime(inputDay, inputMonth, inputYear)) / toDays;
+  let inputDate = calculateTime(inputDay, inputMonth, inputYear);
+  console.log(inputDate);
+  if (inputDate !== NaN && inputDate !== undefined) {
+    let yearsResult = (today - inputDate) / toDays;
 
     let monthsResult = (yearsResult - Math.floor(yearsResult)) * 12;
     let daysResult = (monthsResult % 30) * 10;
@@ -17,8 +18,12 @@ function getBirthday() {
     let newMonths = Math.floor(monthsResult);
     let newYears = Math.floor(yearsResult);
     setNewInterval(newYears, newMonths, newDays);
+    document.getElementById("inputDay").classList.remove("error");
+    document.getElementById("inputMonth").classList.remove("error");
+    document.getElementById("inputYear").classList.remove("error");
+    document.getElementById("error-text").innerHTML = "";
   } else {
-    document.getElementById("error-text").innerHTML = `Must input a valid date`;
+    document.getElementById("error-text").innerHTML = "Must input a valid date";
   }
 }
 function setNewInterval(years, months, days) {

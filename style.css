@@ -91,7 +91,9 @@ container {
 .error {
   border: 1px solid red;
 }
-.error-text {
+#error-text {
+  margin-top: 2%;
+  margin-left: 5%;
   color: red;
   font-family: "Poppins-Italic";
   text-align: left;
@@ -134,6 +136,10 @@ button {
   width: 80px;
   margin-top: 2%;
   cursor: pointer;
+}
+button:hover {
+  background-color: black;
+  border: 1px solid black;
 }
 .result {
   display: grid;
