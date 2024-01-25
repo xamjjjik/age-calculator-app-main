@@ -92,11 +92,17 @@ container {
   border: 1px solid red;
 }
 #error-text {
-  margin-top: 2%;
-  margin-left: 5%;
+  display: flex;
+  margin-top: 1%;
+  margin-left: -16%;
   color: red;
   font-family: "Poppins-Italic";
+  font-size: 0.7rem;
   text-align: left;
+  justify-content: center;
+}
+.error-fields {
+  margin-left: 9%;
 }
 /* .birthday {
   display: block;
