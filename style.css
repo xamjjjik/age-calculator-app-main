@@ -91,6 +91,11 @@ container {
 .error {
   border: 1px solid red;
 }
+.error-text {
+  color: red;
+  font-family: "Poppins-Italic";
+  text-align: left;
+}
 /* .birthday {
   display: block;
   border: 1px solid hsl(0, 0%, 86%);
