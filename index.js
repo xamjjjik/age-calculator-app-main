@@ -6,30 +6,57 @@ function getBirthday() {
   let inputDay = document.getElementById("inputDay").value;
   let inputMonth = document.getElementById("inputMonth").value;
   let inputYear = document.getElementById("inputYear").value;
-  let toDays = 3600000 * 24 * 365;
+  let toDays = 3600000 * 24;
   let inputDate = calculateTime(inputDay, inputMonth, inputYear);
   if (inputDate !== NaN && inputDate !== undefined) {
-    let yearsResult = (today - inputDate) / toDays;
+    let yearsResult = Math.floor((today - inputDate) / toDays / 365);
+    let isLeapYear = Math.floor(yearsResult / 4);
+    let monthsResult = 0;
+    let daysResult = 0;
+    if (isLeapYear < 30) {
+      monthsResult = Math.floor(
+        ((today - inputDate) / toDays - yearsResult * 365) / 30
+      );
 
-    let monthsResult = (yearsResult - Math.floor(yearsResult)) * 12;
-    let daysResult = (monthsResult % 30) * 10;
-    let newDays = Math.floor(daysResult);
-    let newMonths = Math.floor(monthsResult);
-    let newYears = Math.floor(yearsResult);
-    if (newDays < 0 || newMonths < 0 || newYears < 0) {
-      returnToDefault();
+      daysResult = Math.floor(
+        (today - inputDate) / toDays -
+          (yearsResult * 365 + monthsResult * 30) -
+          isLeapYear
+      );
+    } else {
+      monthsResult = Math.floor(
+        ((today - inputDate) / toDays - yearsResult * 365) / 30 -
+          isLeapYear / 30
+      );
+
+      daysResult = Math.floor(
+        (today - inputDate) / toDays -
+          (yearsResult * 365 + monthsResult * 30) -
+          isLeapYear
+      );
+    }
+
+    // console.log(
+    //   daysResult,
+    //   monthsResult,
+    //   yearsResult,
+    //   isLeapYear,
+    //   (today - inputDate) / toDays
+    // );
+    if (daysResult < 0 || monthsResult < 0 || yearsResult < 0) {
+      resetToDefault();
       document.getElementById(
         "error-text"
       ).innerHTML = `<div class="error-fields">Must be in the past</div> <div class="error-fields">Must be in the past</div> <div class="error-fields">Must be in the past</div>`;
     } else {
-      setNewInterval(newYears, newMonths, newDays);
+      setNewInterval(yearsResult, monthsResult, daysResult);
       document.getElementById("inputDay").classList.remove("error");
       document.getElementById("inputMonth").classList.remove("error");
       document.getElementById("inputYear").classList.remove("error");
       document.getElementById("error-text").innerHTML = "";
     }
   } else {
-    returnToDefault();
+    resetToDefault();
     document.getElementById(
       "error-text"
     ).innerHTML = `<div class="error-fields">Enter some number</div> <div class="error-fields">Enter some number</div> <div class="error-fields">Enter some number</div>`;
@@ -61,7 +88,7 @@ function calculateTime(day, month, year) {
   }
 }
 
-function returnToDefault() {
+function resetToDefault() {
   let defaultHTML = [
     (document.getElementById(
       "yearsResult"
