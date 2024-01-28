@@ -11,8 +11,8 @@ function getBirthday() {
   if (inputDate !== NaN && inputDate !== undefined) {
     let yearsResult = Math.floor((today - inputDate) / toDays / 365);
     let isLeapYear = Math.floor(yearsResult / 4);
-    let monthsResult = 0;
-    let daysResult = 0;
+    let monthsResult;
+    let daysResult;
     if (isLeapYear < 30) {
       monthsResult = Math.floor(
         ((today - inputDate) / toDays - yearsResult * 365) / 30
