@@ -1,2 +1,2 @@
-export let today = new Date();
-export const toDays = 3600000 * 24;
+export let TODAY = new Date();
+export const DAYSCONVERTER = 3600000 * 24;

@@ -1,4 +1,4 @@
-import { today } from "/globalVariables.js";
+import { TODAY } from "/globalVariables.js";
 
 export function checkError(day, month, year) {
   let checker = new Date(year, month - 1, day);
@@ -8,8 +8,11 @@ export function checkError(day, month, year) {
   if (day == "") {
     document.getElementById("dayError").innerHTML = "This field is required";
     isError = true;
-  } else if (checker.getDate() != Number(day)) {
+  } else if (day > 31 || day <= 0) {
     document.getElementById("dayError").innerHTML = "Must be a valid day";
+    isError = true;
+  } else if (checker.getDate() != Number(day)) {
+    document.getElementById("dayError").innerHTML = "Must be a valid date";
     isError = true;
   }
 
@@ -17,7 +20,7 @@ export function checkError(day, month, year) {
   if (month == "") {
     document.getElementById("monthError").innerHTML = "This field is required";
     isError = true;
-  } else if (checker.getMonth() + 1 != month) {
+  } else if (month > 12 || month <= 0) {
     document.getElementById("monthError").innerHTML = "Must be a valid month";
     isError = true;
   }
@@ -26,7 +29,7 @@ export function checkError(day, month, year) {
   if (year == "") {
     document.getElementById("yearError").innerHTML = "This field is required";
     isError = true;
-  } else if (checker >= today) {
+  } else if (checker >= TODAY) {
     document.getElementById("yearError").innerHTML = "Must be in the past";
     isError = true;
   }

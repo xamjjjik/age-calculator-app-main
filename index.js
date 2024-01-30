@@ -1,6 +1,8 @@
 import { checkError, removeError, resetToDefault } from "/error.js";
 import { calculateResult } from "/calculate.js";
 
+//ПЕРЕДЕЛАТЬ МАТЕМАТИКУ!!!
+
 const button = document.getElementById("button");
 button.onclick = getBirthday;
 
