@@ -75,8 +75,8 @@ container {
 }
 .birthday {
   display: inline-block;
-  border: 1px solid hsl(0, 0%, 86%);
-  color: hsl(0, 1%, 44%);
+  border: 1px solid black;
+  color: black;
   border-radius: 10%;
   width: 150px;
   height: 50px;
@@ -87,8 +87,9 @@ container {
   margin-right: 40px;
   padding-left: 10%;
 }
-.birthday:hover {
-  color: black;
+input:focus {
+  outline: none;
+  border: 1px solid hsl(259, 100%, 65%);
 }
 .error {
   border: 1px solid red;
@@ -96,7 +97,7 @@ container {
 #error-text {
   display: flex;
   margin-top: 1%;
-  margin-left: -16%;
+  margin-left: -25%;
   color: red;
   font-family: "Poppins-Italic";
   font-size: 0.7rem;
@@ -104,7 +105,11 @@ container {
   justify-content: center;
 }
 .error-fields {
-  margin-left: 9%;
+  display: block;
+  margin-left: 5%;
+
+  height: 2rem;
+  width: 9rem;
 }
 /* .birthday {
   display: block;
@@ -130,7 +135,6 @@ container {
 
   height: 1px;
 
-  margin-top: 2%;
   margin-left: 10px;
 }
 
@@ -142,7 +146,7 @@ button {
   border: 1px solid hsl(259, 100%, 65%);
   height: 80px;
   width: 80px;
-  margin-top: 2%;
+
   cursor: pointer;
 }
 button:hover {
