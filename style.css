@@ -41,16 +41,13 @@ container {
 }
 
 .app-window {
-  width: 55%;
-  height: 40%;
-  /* display: grid; */
-
   background-color: hsl(0, 0%, 100%);
 
   border-radius: 3% 3% 30% 3%;
   margin: auto;
   margin-top: 3.5%;
   margin-left: 22%;
+  padding: 0% 4% 3%;
 
   text-align: center;
   justify-content: center;
@@ -63,29 +60,29 @@ container {
   font-family: "Poppins-Bold";
   letter-spacing: 0.15rem;
 
-  word-spacing: 8.5rem;
+  word-spacing: 9rem;
   margin-top: 5%;
-  margin-left: -29%;
+  margin-left: -30%;
 }
 
 .input-form {
   display: flex;
-  margin-left: 10%;
+  margin-left: 2%;
   margin-top: 0.5%;
 }
 .birthday {
   display: inline-block;
-  border: 1px solid black;
+  border: 1px solid hsl(0, 1%, 44%);
   color: black;
   border-radius: 10%;
-  width: 150px;
-  height: 50px;
+  width: 8rem;
+  height: 3.5rem;
   line-height: 3rem;
-  font-size: 20px;
+  font-size: 28px;
   font-family: "Poppins-Bold";
   text-align: left;
-  margin-right: 40px;
-  padding-left: 10%;
+  margin-right: 3.5rem;
+  padding-left: 12%;
 }
 input:focus {
   outline: none;
@@ -127,11 +124,12 @@ input::-webkit-inner-spin-button {
   vertical-align: middle;
 
   border-bottom: 2px solid hsl(0, 0%, 86%);
-  width: 700px;
+  width: 37rem;
 
   height: 1px;
 
   margin-left: 10px;
+  margin-top: -5%;
 }
 
 button {
@@ -140,8 +138,9 @@ button {
   background-color: hsl(259, 100%, 65%);
   border-radius: 50%;
   border: 1px solid hsl(259, 100%, 65%);
-  height: 80px;
-  width: 80px;
+  height: 90px;
+  width: 90px;
+  margin-top: -5%;
 
   cursor: pointer;
 }
@@ -152,10 +151,10 @@ button:hover {
 .result {
   display: grid;
   text-align: left;
-  margin-left: 10%;
-  margin-bottom: 3%;
+  margin-left: 3%;
+
   font-family: "Poppins-ExtraBoldItalic";
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: 900;
   color: hsl(259, 100%, 65%);
 }
