@@ -1,3 +1,173 @@
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1440 * 10);
+
+  @media (max-width: 1024px) {
+    font-size: calc(100vw / 786 * 10);
+  }
+  @media (max-width: 768px) {
+    font-size: calc(100vw / 500 * 10);
+  }
+  @media (max-width: 500px) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+body {
+  min-width: 320px;
+  background-color: hsl(0, 0%, 94%);
+  height: 100%;
+}
+
+container {
+  display: flex;
+  height: 140rem;
+  padding: 3rem 3rem 5rem;
+}
+
+.app-window {
+  background-color: hsl(0, 0%, 100%);
+
+  border-radius: 3% 3% 30% 3%;
+  margin: auto;
+  margin-top: 10rem;
+  width: 55rem;
+  height: 45rem;
+
+  padding: 0% 4% 3%;
+
+  text-align: center;
+  font-family: "Poppins";
+}
+
+.topic {
+  display: flex;
+  color: hsl(0, 1%, 44%);
+  font-size: 1rem;
+  font-family: "Poppins-Bold";
+  letter-spacing: 0.3rem;
+  width: 50rem;
+  margin-top: 5rem;
+  margin-left: -8rem;
+}
+.topic > div {
+  width: 9rem;
+  margin-left: 4rem;
+  padding-left: 2.2rem;
+}
+
+.input-form {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+.birthday {
+  display: inline-block;
+  border: 0.1rem solid hsl(0, 1%, 44%);
+  color: black;
+  border-radius: 10%;
+  width: 9rem;
+  height: 4.5rem;
+  line-height: 3rem;
+  font-size: 2rem;
+  font-family: "Poppins-Bold";
+  text-align: left;
+  margin-right: 3.5rem;
+  padding-left: 1.5rem;
+}
+input:focus {
+  outline: none;
+  border: 0.1rem solid hsl(259, 100%, 65%);
+}
+input:hover {
+  border: 0.1rem solid hsl(259, 100%, 65%);
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.error {
+  border: 0.1rem solid red;
+}
+#error-text {
+  display: flex;
+  margin-top: 1rem;
+  width: 55rem;
+  color: red;
+  font-family: "Poppins-Italic";
+  font-size: 1rem;
+}
+.error-fields {
+  display: block;
+  margin-left: 1rem;
+  padding-right: 2rem;
+
+  height: 2rem;
+  width: 11rem;
+}
+
+.line {
+  display: inline-block;
+  vertical-align: middle;
+
+  border-bottom: 0.2rem solid hsl(0, 0%, 86%);
+  width: 45rem;
+
+  height: 0.5rem;
+  margin-top: -3rem;
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  border: 0.1rem solid hsl(259, 100%, 65%);
+  height: 8rem;
+  width: 8rem;
+  margin-top: -3rem;
+
+  cursor: pointer;
+
+  @media (max-width: 500px) {
+    text-align: center;
+    justify-content: center;
+  }
+}
+button:hover {
+  background-color: black;
+  border: 0.1rem solid black;
+}
+.result {
+  display: grid;
+  text-align: left;
+
+  font-family: "Poppins-ExtraBoldItalic";
+  font-size: 7rem;
+  font-weight: 900;
+  color: hsl(259, 100%, 65%);
+  margin-top: 2rem;
+}
+.result > * {
+  margin-top: -3rem;
+}
+.color-text {
+  color: black;
+}
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @font-face {
   font-family: "Poppins-ExtraBold";
   src: url(../assets/fonts/Poppins-ExtraBold.ttf) format("truetype");
@@ -27,147 +197,4 @@
   src: url(../assets/fonts/Poppins-Regular.ttf) format("truetype");
   font-weight: bold;
   font-style: normal;
-}
-body {
-  background-color: hsl(0, 0%, 94%);
-  height: 100%;
-}
-
-container {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.app-window {
-  background-color: hsl(0, 0%, 100%);
-
-  border-radius: 3% 3% 30% 3%;
-  margin: auto;
-  margin-top: 3.5%;
-  margin-left: 22%;
-  padding: 0% 4% 3%;
-
-  text-align: center;
-  justify-content: center;
-  font-family: "Poppins";
-}
-
-.topic {
-  color: hsl(0, 1%, 44%);
-  font-size: 0.8rem;
-  font-family: "Poppins-Bold";
-  letter-spacing: 0.15rem;
-
-  word-spacing: 9rem;
-  margin-top: 5%;
-  margin-left: -30%;
-}
-
-.input-form {
-  display: flex;
-  margin-left: 2%;
-  margin-top: 0.5%;
-}
-.birthday {
-  display: inline-block;
-  border: 1px solid hsl(0, 1%, 44%);
-  color: black;
-  border-radius: 10%;
-  width: 8rem;
-  height: 3.5rem;
-  line-height: 3rem;
-  font-size: 28px;
-  font-family: "Poppins-Bold";
-  text-align: left;
-  margin-right: 3.5rem;
-  padding-left: 12%;
-}
-input:focus {
-  outline: none;
-  border: 1px solid hsl(259, 100%, 65%);
-}
-input:hover {
-  border: 1px solid hsl(259, 100%, 65%);
-  transition-duration: 400ms;
-  cursor: pointer;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.error {
-  border: 1px solid red;
-}
-#error-text {
-  display: flex;
-  margin-top: 1%;
-  margin-left: -25%;
-  color: red;
-  font-family: "Poppins-Italic";
-  font-size: 0.7rem;
-  text-align: left;
-  justify-content: center;
-}
-.error-fields {
-  display: block;
-  margin-left: 5%;
-
-  height: 2rem;
-  width: 9rem;
-}
-
-.line {
-  display: inline-block;
-  vertical-align: middle;
-
-  border-bottom: 2px solid hsl(0, 0%, 86%);
-  width: 37rem;
-
-  height: 1px;
-
-  margin-left: 10px;
-  margin-top: -5%;
-}
-
-button {
-  display: inline-block;
-  vertical-align: middle;
-  background-color: hsl(259, 100%, 65%);
-  border-radius: 50%;
-  border: 1px solid hsl(259, 100%, 65%);
-  height: 90px;
-  width: 90px;
-  margin-top: -5%;
-
-  cursor: pointer;
-}
-button:hover {
-  background-color: black;
-  border: 1px solid black;
-}
-.result {
-  display: grid;
-  text-align: left;
-  margin-left: 3%;
-
-  font-family: "Poppins-ExtraBoldItalic";
-  font-size: 5rem;
-  font-weight: 900;
-  color: hsl(259, 100%, 65%);
-}
-.color-text {
-  color: black;
-}
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
