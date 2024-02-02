@@ -27,6 +27,6 @@ export function calculateResult(inputDate) {
         isLeapYear
     );
   }
-  console.log(isLeapYear);
+
   return [daysResult, monthsResult, yearsResult];
 }

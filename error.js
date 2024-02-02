@@ -41,7 +41,10 @@ export function checkError(day, month, year) {
     document.getElementById("inputMonth").className += " error";
 
     document.getElementById("inputYear").className += " error";
+
+    document.getElementsByClassName("topic")[0].classList.add("topic-error");
   }
+
   return isError;
 }
 
@@ -53,6 +56,7 @@ export function removeError() {
   document.getElementById("dayError").innerHTML = "";
   document.getElementById("monthError").innerHTML = "";
   document.getElementById("yearError").innerHTML = "";
+  document.getElementsByClassName("topic")[0].classList.remove("topic-error");
 }
 
 //Сброс к начальному состоянию вывода при ошибке
