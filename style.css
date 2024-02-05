@@ -96,21 +96,23 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-#error-text {
+/* #error-text {
   display: flex;
   margin-top: 1rem;
   width: 55rem;
   color: red;
   font-family: "Poppins-Italic";
   font-size: 1rem;
-}
+} */
 .error-fields {
   display: block;
-  margin-left: 1rem;
-  padding-right: 2rem;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  /* padding-right: 2rem; */
 
   height: 2rem;
   width: 11rem;
+  color: red;
 }
 
 /* Разделительная полоса и кнопка */
@@ -123,7 +125,7 @@ input::-webkit-inner-spin-button {
   width: 47rem;
 
   height: 0.5rem;
-  margin-top: 1.5rem;
+  margin-top: -1rem;
 
   @media (max-width: 768px) {
     width: 80vw;
@@ -153,8 +155,8 @@ button:hover {
   border: 0.1rem solid black;
 }
 img {
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
 }
 
 /* Вывод результата */
@@ -167,7 +169,7 @@ img {
   font-size: 7rem;
   font-weight: 900;
   color: hsl(259, 100%, 65%);
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-left: 4rem;
 
   @media (max-width: 768px) {
@@ -175,7 +177,7 @@ img {
   }
 }
 .result > * {
-  margin-top: -2rem;
+  margin-top: -2.5rem;
 }
 .color-text {
   color: black;

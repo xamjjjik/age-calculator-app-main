@@ -42,7 +42,12 @@ export function checkError(day, month, year) {
 
     document.getElementById("inputYear").className += " error";
 
+    // return document
+    //   .getElementsByClassName("topic")
+    //   .map((t) => t.classList.add("topic-error"));
     document.getElementsByClassName("topic")[0].classList.add("topic-error");
+    document.getElementsByClassName("topic")[1].classList.add("topic-error");
+    document.getElementsByClassName("topic")[2].classList.add("topic-error");
   }
 
   return isError;
@@ -57,6 +62,8 @@ export function removeError() {
   document.getElementById("monthError").innerHTML = "";
   document.getElementById("yearError").innerHTML = "";
   document.getElementsByClassName("topic")[0].classList.remove("topic-error");
+  document.getElementsByClassName("topic")[1].classList.remove("topic-error");
+  document.getElementsByClassName("topic")[2].classList.remove("topic-error");
 }
 
 //Сброс к начальному состоянию вывода при ошибке
