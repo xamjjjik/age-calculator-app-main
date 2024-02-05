@@ -16,10 +16,9 @@ function getBirthday() {
   let result = calculateResult(inputDate);
   if (checkError(inputDay, inputMonth, inputYear)) {
     resetToDefault();
-  } else {
-    setNewInterval(result[0], result[1], result[2]);
-    removeError();
+    return;
   }
+  setNewInterval(result[0], result[1], result[2]);
 }
 
 function setNewInterval(days, months, years) {
