@@ -25,59 +25,64 @@
     <main>
       <container>
         <div class="app-window">
-          <div class="topic">
-            <div>DAY</div>
-            <div>MONTH</div>
-            <div>YEAR</div>
-          </div>
-          <div class="input-form">
-            <div>
-              <input
-                class="birthday"
-                id="inputDay"
-                type="number"
-                placeholder="DD"
-              />
+          <div class="input-section">
+            <div class="input-column day">
+              <div class="topic">DAY</div>
+              <div>
+                <input
+                  class="birthday"
+                  id="inputDay"
+                  type="number"
+                  placeholder="DD"
+                />
+              </div>
+              <div
+                class="error-fields"
+                id="dayError"
+              ></div>
             </div>
-            <div>
-              <input
-                class="birthday"
-                id="inputMonth"
-                type="number"
-                placeholder="MM"
-              />
+
+            <div class="input-column month">
+              <div class="topic">MONTH</div>
+              <div>
+                <input
+                  class="birthday"
+                  id="inputMonth"
+                  type="number"
+                  placeholder="MM"
+                />
+              </div>
+              <div
+                class="error-fields"
+                id="monthError"
+              ></div>
             </div>
-            <div>
-              <input
-                class="birthday"
-                id="inputYear"
-                type="number"
-                placeholder="YYYY"
-              />
+
+            <div class="input-column year">
+              <div class="topic">YEAR</div>
+              <div>
+                <input
+                  class="birthday"
+                  id="inputYear"
+                  type="number"
+                  placeholder="YYYY"
+                />
+              </div>
+              <div
+                class="error-fields"
+                id="yearError"
+              ></div>
             </div>
-          </div>
-          <div id="error-text">
-            <div
-              class="error-fields"
-              id="dayError"
-            ></div>
-            <div
-              class="error-fields"
-              id="monthError"
-            ></div>
-            <div
-              class="error-fields"
-              id="yearError"
-            ></div>
           </div>
 
-          <div class="line"></div>
-          <button id="button">
-            <img
-              src="./assets/images/icon-arrow.svg"
-              alt="arrow icon"
-            />
-          </button>
+          <div class="line">
+            <button id="button">
+              <img
+                src="./assets/images/icon-arrow.svg"
+                alt="arrow icon"
+              />
+            </button>
+          </div>
 
           <div class="result">
             <div id="yearsResult">
